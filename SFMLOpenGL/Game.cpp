@@ -1,7 +1,18 @@
 #include <Game.h>
 
-Game::Game() : window(VideoMode(800, 600), "OpenGL")
+// // Uncomment for Part 2
+// // ********************
+bool flip = false;
+int current = 1;
+// // ********************
+
+Game::Game() : window(VideoMode(800, 600), "OpenGL"),
+primatives(2)
 {
+	// // Uncomment for Part 2
+	// // ********************
+	 index = glGenLists(primatives);
+	// // ********************
 }
 
 Game::~Game() {}
@@ -67,9 +78,10 @@ void Game::draw()
 	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); }
 	glEnd();*/
 
-	/*glBegin(GL_LINE_LOOP);
+	glBegin(GL_LINE_LOOP);
 	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); }
-	glEnd();*/
+	glEnd();
+	
 
 	//glBegin(GL_TRIANGLES);
 	//{ glVertex3f(0.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); }
@@ -103,9 +115,28 @@ void Game::draw()
 	//{glVertex3f(2.0, -2.0, -5.0); glVertex3f(1.0, -1.0, -5.0); glVertex3f(0.0, -1.0, -5.0); glVertex3f(1.0, -1.0, -5.0); }
 	//glEnd();
 	
-	glBegin(GL_POLYGON);
+	/*glBegin(GL_POLYGON);
 	{glVertex3f(-2.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 2.0, -5.0); }
-	glEnd();
+	glEnd();*/
+
+//	glLoadIdentity();
+
+	glRotatef(rotationAngle, 0.0f, 0.0f, 5.0f);
+
+	glTranslatef(0.0069f, 0.0069f, 0.0069f);
+
+	glScalef(-1.f, 1.0005f, -1.f);
+
+	//Invesitgation into gl stuff and such.
+	//Conclusion: Lots of fun and random stuff to do.
+	//Victum: my future
+	//Suspect: Pete, Phill, 3rd level education system
+	//Method: Blunt force trauma to the head/ slow torture
+	//Motive: they got paid
+	//Known witnesses: most of the 2a CW_208 class(Don't ask Dylan he wont remember), My innocence(missing)
+	// Designation : COLD CASE
+
+	// Officer: Gen. Madness
 
 	window.display();
 
@@ -115,4 +146,3 @@ void Game::unload()
 {
 	cout << "Cleaning up" << endl;
 }
-
