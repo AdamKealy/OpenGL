@@ -58,42 +58,37 @@ void Game::update()
 
 void Game::draw()
 {
-	cout << "Draw up" << endl;
+//	cout << "Draw up" << endl;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 
-	//glBegin(GL_POINTS);
-	//{glVertex3f(0.0,2.0,-5.0); }
-	//glEnd();
-
-	/*glBegin(GL_LINES);
-	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); }
+	/*glBegin(GL_POINTS);
+	{glVertex3f(0.0,2.0,-5.0); }
 	glEnd();*/
 
-	/*glBegin(GL_LINE_STRIP);
-	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); }
-	glEnd();*/
+	glBegin(GL_LINES);
+	{glVertex3f(-2.0, 2.0, -5.0); glVertex3f(-2.0, 1.0, -5.0); }
+	glEnd();
 
-	/*glBegin(GL_LINE_LOOP);
-	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); }
-	glEnd();*/
+	glBegin(GL_LINE_STRIP);
+	{glVertex3f(-1.9, 2.0, -5.0); glVertex3f(-1.9, 1.0, -5.0); glVertex3f(-1.8, 1.0, -5.0); }
+	glEnd();
 
 	glBegin(GL_LINE_LOOP);
-	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); }
+	{glVertex3f(-1.7, 2.0, -5.0); glVertex3f(-1.7, 1.0, -5.0); glVertex3f(-1.6, 1.5, -5.0); }
 	glEnd();
 	
+	glBegin(GL_TRIANGLES);
+	{ glVertex3f(-1.5, 2.0, -5.0); glVertex3f(-1.5, 1.0, -5.0); glVertex3f(-1.4, 1.5, -5.0); }
+	glEnd();
 
-	//glBegin(GL_TRIANGLES);
-	//{ glVertex3f(0.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); }
-	//glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	{glVertex3f(-1.3, 2.0, -5.0); glVertex3f(-1.1, 2.0, -5.0); glVertex3f(-1.1, 1.0, -5.0); glVertex3f(-1.3, 1.0, -5.0);}
+	glEnd();
 
-	/*glBegin(GL_TRIANGLE_STRIP);
-	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); }
+	/*glBegin(GL_TRIANGLE_FAN);
+	{glVertex3f(0.0, 2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(-2.0, 0.0, -5.0); glVertex3f(.0, 2.0, -5.0); }
 	glEnd();*/
-
-	//glBegin(GL_TRIANGLE_FAN);
-	//{glVertex3f(0.0, 2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 0.0, -5.0); glVertex3f(0.0, -2.0, -5.0); glVertex3f(-2.0, 0.0, -5.0); glVertex3f(.0, 2.0, -5.0); }
-	//glEnd();
 
 	/*glBegin(GL_QUADS);
 	{glVertex3f(-2.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 2.0, -5.0);}
@@ -119,14 +114,17 @@ void Game::draw()
 	{glVertex3f(-2.0, 2.0, -5.0); glVertex3f(-2.0, -2.0, -5.0); glVertex3f(2.0, -2.0, -5.0); glVertex3f(2.0, 2.0, -5.0); }
 	glEnd();*/
 
-//	glLoadIdentity();
 
-	glRotatef(rotationAngle, 0.0f, 0.0f, 5.0f);
+//	glRotatef(rotationAngle, 0.0f, 5.0f, 0.0f);
 
-	glTranslatef(0.0069f, 0.0069f, 0.0069f);
+//	glTranslatef(0.0f, 0.0f, -0.0069f);
 
-	glScalef(-1.f, 1.0005f, -1.f);
+//	glScalef(1.0005f, 1.0f, 1.f);
 
+	
+	
+	
+	
 	//Invesitgation into gl stuff and such.
 	//Conclusion: Lots of fun and random stuff to do.
 	//Victum: my future
